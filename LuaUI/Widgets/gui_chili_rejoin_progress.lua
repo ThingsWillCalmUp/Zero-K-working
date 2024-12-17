@@ -130,8 +130,8 @@ end
 
 function widget:Initialize()
 
-	local screenWidth = Spring.GetViewGeometry()
-	local y = screenWidth*2/11 + 32
+	local screenWidth, screenHeight = Spring.GetViewGeometry()
+	local y = screenHeight/3
 
 	screen0 = WG.Chili.Screen0
 
@@ -141,7 +141,7 @@ function widget:Initialize()
 		width = 280,
 		height = 60,
 		left = 2, --dock left?
-		y = y, --halfway on screen?
+		y = y, --one-third of the way up the screen
 		dockable = true,
 		draggable = false, --disallow drag to avoid capturing mouse click
 		resizable = false,
